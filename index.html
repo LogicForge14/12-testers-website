@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="12 Testers provides software testing services to help businesses release better software.">
+  <meta name="theme-color" content="#101827">
+  <title>12 Testers | Software Testing Services</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    body.dark {
+      --bg: #0b1120;
+      --surface: #151e30;
+      --text: #f1f5f9;
+      --muted: #a6b3c7;
+      --border: #2b374b;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin-inline: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo { font-size: 1.4rem; font-weight: 800; }
+    .logo span { color: var(--accent); }
+
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a:hover { color: var(--accent); }
+
+    button, .button {
+      display: inline-block;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: white;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 100px 0 90px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, #c7d2fe 0%, transparent 65%);
+    }
+
+    body.dark .hero {
+      background:
+        radial-gradient(ellipse at top, #24235a 0%, transparent 65%);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 18px auto;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto 28px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    section { padding: 76px 0; scroll-margin-top: 80px; }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.2; }
+    .section-heading p, .muted { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .card h3 { margin-top: 8px; }
+    .symbol { font-size: 1.8rem; }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 16px 0 4px;
+    }
+
+    .price small {
+      font-size: .9rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .featured { border: 2px solid var(--accent); }
+
+    .card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      min-height: 105px;
+    }
+
+    .card .button { text-align: center; width: 100%; }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box {
+      padding: 45px 24px;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pricing { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .nav { padding: 15px 0; flex-wrap: wrap; }
+      nav { order: 3; width: 100%; gap: 16px; font-size: .9rem; }
+      .hero { padding: 70px 0; }
+      section { padding: 55px 0; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home">12 <span>Testers</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="secondary" id="themeToggle"
+              type="button" aria-label="Toggle dark mode">
+        ☾ Theme
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <span class="eyebrow">Software quality made simple</span>
+        <h1>Find bugs early. Launch with confidence.</h1>
+        <p>
+          12 Testers helps businesses improve software quality
+          with practical testing services tailored to their needs.
+        </p>
+        <div class="actions">
+          <a class="button" href="#services">Explore Services</a>
+          <a class="button secondary" href="#pricing">View Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our services</span>
+          <h2>Testing that fits your product</h2>
+          <p>Choose the testing support that suits your project.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="symbol">🔎</div>
+            <h3>Manual Testing</h3>
+            <p class="muted">Functional checks, regression testing and exploratory testing.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">⚙️</div>
+            <h3>Automation Testing</h3>
+            <p class="muted">Automated test execution for repeatable quality checks.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">🔌</div>
+            <h3>API Testing</h3>
+            <p class="muted">Validate API responses, workflows and integrations.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">📈</div>
+            <h3>Performance Testing</h3>
+            <p class="muted">Assess responsiveness and behavior under load.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Transparent packages</span>
+          <h2>Simple plans for your project</h2>
+          <p>Replace these example prices and deliverables with your actual offers.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="card">
+            <h3>Starter</h3>
+            <p class="muted">For small projects</p>
+            <div class="price">₹2,999 <small>/ project</small></div>
+            <ul>
+              <li>Basic functional testing</li>
+              <li>Bug report summary</li>
+              <li>One testing cycle</li>
+            </ul>
+            <a class="button secondary"
+               href="#contact"
+               data-plan="Starter">Choose Starter</a>
+          </article>
+
+          <article class="card featured">
+            <span class="eyebrow">Popular</span>
+            <h3>Professional</h3>
+            <p class="muted">For growing products</p>
+            <div class="price">₹7,999 <small>/ project</small></div>
+            <ul>
+              <li>Functional and regression testing</li>
+              <li>Detailed bug reports</li>
+              <li>Retesting included</li>
+            </ul>
+            <a class="button"
+               href="#contact"
+               data-plan="Professional">Choose Professional</a>
+          </article>
+
+          <article class="card">
+            <h3>Enterprise</h3>
+            <p class="muted">For larger requirements</p>
+            <div class="price">Custom</div>
+            <ul>
+              <li>Tailored testing scope</li>
+              <li>Multiple testing types</li>
+              <li>Custom project proposal</li>
+            </ul>
+            <a class="button secondary"
+               href="#contact"
+               data-plan="Enterprise">Request a Quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <span class="eyebrow">Why 12 Testers?</span>
+        <h2>Quality you can plan for</h2>
+        <p class="muted">
+          We aim to help teams identify issues, understand risks
+          and deliver better user experiences. Tell us about your
+          product and we can discuss a suitable testing plan.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="eyebrow">Let's work together</span>
+          <h2>Ready to test your product?</h2>
+          <p class="muted">
+            Tell us about your project and testing requirements.
+          </p>
+          <!-- Replace this email with your real business email. -->
+          <a class="button" id="emailLink"
+             href="mailto:hello@example.com?subject=12%20Testers%20Inquiry">
+            Request a Quote
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> 12 Testers. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("themeToggle")
+      .addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+      });
+
+    document.querySelectorAll("[data-plan]").forEach(link => {
+      link.addEventListener("click", () => {
+        const plan = link.dataset.plan;
+        document.getElementById("emailLink").href =
+          "mailto:hello@example.com?subject=" +
+          encodeURIComponent("12 Testers - " + plan + " package inquiry");
+      });
+    });
+  </script>
+</body>
+</html>
