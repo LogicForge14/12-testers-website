@@ -8,7 +8,7 @@
 
   <meta name="description"
     content="12 Testers provides 14-day closed testing support with 12 testers to help Android developers prepare their apps for Google Play production access.">
-
+<!-- new branch -->
   <title>12 Testers | Google Play Closed Testing Service</title>
 
   <style>
@@ -1708,7 +1708,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer>
+  <!-- <footer>
     <div class="container footer-inner">
       <p>© <span id="currentYear"></span> 12 Testers. All rights reserved.</p>
       <p>Helping developers test with confidence.</p>
@@ -1717,7 +1717,64 @@
     <div class="footer-links">
       <a href="./terms.html">Terms & Conditions</a>
     </div>
+  </footer> -->
+
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>
+        © <span id="footer-year"></span> 12 Testers.
+        All rights reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="./terms.html">Terms & Conditions</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="https://wa.me/917666079737" target="_blank" rel="noopener noreferrer">
+          Contact Us
+        </a>
+      </div>
+    </div>
   </footer>
+
+  <style>
+    .site-footer {
+      padding: 30px 20px;
+      background: #111827;
+      color: #cbd5e1;
+      text-align: center;
+    }
+
+    .footer-content p {
+      margin: 0 0 15px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      color: #c4b5fd;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+  </style>
+
+  <script>
+    document.getElementById("footer-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+
 
   <script>
     /*
